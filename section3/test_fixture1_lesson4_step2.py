@@ -5,14 +5,14 @@ link = "http://selenium1py.pythonanywhere.com/"
 
 class TestMainPage1():
     @classmethod
-    def setup_class(self):
+    def setup_class(cls):
         print("\nstart driver for test suite..")
-        self.driver = webdriver.Chrome()
+        cls.driver = webdriver.Chrome()
 
     @classmethod
-    def teardown_class(self):
+    def teardown_class(cls):
         print("quit driver for test suite..")
-        self.driver.quit()
+        cls.driver.quit()
 
     def test_guest_should_see_login_link(self):
         self.driver.get(link)
